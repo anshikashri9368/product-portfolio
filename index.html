@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anshika Shrivastava — UI/UX Designer & Front-End Developer</title>
+<meta name="description" content="Portfolio of Anshika Shrivastava, a UI/UX designer who designs in Figma and builds in HTML, CSS, JavaScript and React.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anshika Shrivastava">
+<meta property="og:description" content="UI/UX Designer | Product Designer | Front-End Developer. Explore my creative work and projects.">
+<meta property="og:image" content="preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anshika Shrivastava">
+<meta name="twitter:description" content="Explore my design and development portfolio.">
+<meta name="twitter:image" content="preview.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+@property --a{syntax:'<angle>';inherits:false;initial-value:0deg}
+:root{--bg:#f8f8f6;--bg2:#fff;--ink:#15171f;--mute:#585d6b;--line:#e3e3de;--ac:#4338ca;--ac2:#eef0ff;--r:10px;--glow:color-mix(in srgb,var(--ac) 20%,transparent)}
+[data-theme=dark]{--bg:#101218;--bg2:#171a22;--ink:#eceef4;--mute:#a1a7b8;--line:#2a2e3a;--ac:#8b93ff;--ac2:#1e2233}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}img{max-width:100%;display:block}button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+[hidden]{display:none!important}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{position:relative;padding:88px 0}
+section>.wrap{position:relative;z-index:1}
+.alt{background:var(--bg2);border-block:1px solid var(--line)}
+.sec-head{max-width:620px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:10px}
+.sec-head h2::after{content:"";display:block;width:54px;height:4px;border-radius:4px;margin-top:12px;background:linear-gradient(90deg,var(--ac),#0ea5e9)}
+.sec-head p{color:var(--mute)}
+.fx{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);background:var(--ac);opacity:.16;animation:float 20s ease-in-out infinite}
+.blob.b2{background:#0ea5e9;animation-duration:26s;animation-delay:-8s}
+@keyframes float{50%{transform:translate(50px,-40px) scale(1.12)}}
+@keyframes hov{50%{translate:0 -14px}}
+@keyframes ang{to{--a:360deg}}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Fraunces,serif;font-weight:600;font-size:1.25rem;text-decoration:none}
+.menu{display:flex;gap:26px;list-style:none}
+.menu a{text-decoration:none;font-size:.92rem;color:var(--mute);padding:6px 0;border-bottom:2px solid transparent}
+.menu a:hover,.menu a.on{color:var(--ink);border-color:var(--ac)}
+.tools{display:flex;gap:8px;align-items:center}
+.ib{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--bg2);display:inline-grid;place-items:center;text-decoration:none;transition:.2s}
+.ib:hover{border-color:var(--ac);color:var(--ac)}
+#burger{display:none}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:var(--r);font-weight:600;font-size:.94rem;text-decoration:none;border:1px solid transparent;transition:.2s}
+.btn-p{background:var(--ac);color:#fff;box-shadow:0 10px 28px color-mix(in srgb,var(--ac) 35%,transparent)}.btn-p:hover{filter:brightness(1.1)}
+.btn-g{border-color:var(--line);background:var(--bg2)}.btn-g:hover{border-color:var(--ac);color:var(--ac)}
+/* splash */
+.splash{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:20px;background:radial-gradient(circle at 15% 10%,rgba(67,56,202,.28),transparent 45%),radial-gradient(circle at 88% 92%,rgba(14,165,233,.25),transparent 45%),var(--bg);transition:opacity .55s,visibility .55s}
+.splash.hide{opacity:0;visibility:hidden}
+.sc{position:relative;z-index:1;width:min(460px,100%);text-align:center;background:color-mix(in srgb,var(--bg2) 80%,transparent);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:22px;padding:44px 30px 30px;box-shadow:0 30px 80px rgba(20,23,31,.14);animation:pop .8s cubic-bezier(.16,1,.3,1) both}
+.sc::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:conic-gradient(from var(--a),transparent 0,var(--ac),#0ea5e9,transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ang 5s linear infinite;pointer-events:none}
+@keyframes pop{from{opacity:0;transform:translateY(26px) scale(.96)}}
+.av{position:relative;width:150px;height:150px;margin:0 auto 26px}
+.av img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 18%;border:5px solid var(--bg2);box-shadow:0 14px 40px rgba(67,56,202,.35)}
+.av::before{content:"";position:absolute;inset:-9px;border-radius:50%;background:conic-gradient(var(--ac),#0ea5e9,transparent 70%,var(--ac));-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2px));mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2px));animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sc h2{font-size:1.7rem;margin-bottom:4px}
+.sr{color:var(--ac);font-weight:600;font-size:1.1rem;min-height:1.7em;margin-bottom:18px}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--ac);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.sic{display:flex;justify-content:center;gap:10px;margin-bottom:18px}
+.sic i{width:40px;height:40px;border-radius:12px;background:var(--ac2);color:var(--ac);display:grid;place-items:center;animation:hov 3s ease-in-out infinite}
+.sic i:nth-child(2){animation-delay:-.7s}.sic i:nth-child(3){animation-delay:-1.4s}.sic i:nth-child(4){animation-delay:-2.1s}
+.sk{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:26px}
+.sk span{font-size:.82rem;border:1px solid var(--line);border-radius:50px;padding:5px 13px;color:var(--mute)}
+.sc .btn{width:100%;justify-content:center;padding:14px}
+.sc .btn i{transition:transform .25s}.sc .btn:hover i{transform:translateX(4px)}
+/* hero */
+#home{min-height:100vh;display:flex;align-items:center;padding:90px 0 70px;overflow:hidden}
+#home>.wrap{width:100%}
+.wall{position:absolute;inset:-25% -12%;display:grid;grid-template-columns:repeat(6,1fr);gap:18px;align-items:start;transform:rotate(-10deg);opacity:.34;pointer-events:none}
+.wcol{display:grid;gap:18px;animation:colup 55s linear infinite}
+.wcol:nth-child(even){animation-direction:reverse;animation-duration:70s}
+.wcol img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:12px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(20,23,31,.12)}
+@keyframes colup{to{transform:translateY(-50%)}}
+.wall-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--bg) 8%,color-mix(in srgb,var(--bg) 78%,transparent) 48%,color-mix(in srgb,var(--bg) 25%,transparent) 100%),linear-gradient(180deg,transparent 70%,var(--bg))}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.avail{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:500;color:var(--mute);border:1px solid var(--line);background:var(--bg2);padding:6px 14px;border-radius:50px;margin-bottom:22px}
+.avail i{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px rgba(22,163,74,.15)}
+.role{color:var(--ac);font-weight:600;font-size:.95rem;margin-bottom:14px;min-height:1.6em}
+.hero h1{font-size:clamp(2.4rem,5.5vw,4rem);margin-bottom:18px;background:linear-gradient(120deg,var(--ink) 35%,var(--ac) 70%,#0ea5e9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mute);font-size:1.1rem;max-width:540px;margin-bottom:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
+.stats{display:flex;flex-wrap:nowrap;gap:clamp(14px,4vw,56px);padding-top:24px;border-top:1px solid var(--line)}
+.stats>div{flex:1;min-width:0}
+.stats b{display:block;font-family:Fraunces,serif;font-size:clamp(1.8rem,4.2vw,3.2rem);line-height:1;margin-bottom:6px;background:linear-gradient(120deg,var(--ink),var(--ac));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats span{display:block;color:var(--mute);font-size:clamp(.72rem,1.5vw,.95rem)}
+.stats b span{display:inline;font-size:inherit;color:inherit}
+.girl{position:relative;max-width:430px;margin:0 auto;padding:18px;transform:translateY(-36px)}
+.girl::before{content:"";position:absolute;inset:0;border-radius:36px;background:conic-gradient(from var(--a),var(--ac),#0ea5e9,transparent 60%,var(--ac));animation:ang 8s linear infinite;filter:blur(26px);opacity:.45}
+.gframe{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:6px solid var(--bg2);background:var(--ac2);box-shadow:0 40px 90px rgba(20,23,31,.3)}
+.gframe img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.gchip{position:absolute;display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:50px;background:var(--bg2);border:1px solid var(--line);font-weight:600;font-size:.88rem;box-shadow:0 14px 34px rgba(20,23,31,.18);animation:hov 6s ease-in-out infinite}
+.gchip i{color:var(--ac)}
+.g1{left:-14px;top:14%}.g2{right:-14px;top:46%;animation-delay:-2s}.g3{left:-6px;bottom:8%;animation-delay:-4s}
+/* marquee */
+.mq{padding:22px 0;background:linear-gradient(90deg,var(--ac),#0ea5e9,var(--ac));color:#fff;overflow:hidden}
+.mq-track{display:flex;width:max-content;animation:mq 34s linear infinite}
+.mq:hover .mq-track{animation-play-state:paused}
+.mq-item{display:inline-flex;align-items:center;gap:26px;padding-right:26px;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(1.2rem,2.6vw,1.9rem);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.mq-item::after{content:"\2726";font-size:.6em}
+.mq-item:nth-child(even){color:transparent;-webkit-text-stroke:1.5px #fff}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ============================================================
+   WORK SECTION
+   ============================================================ */
+.wtabs{display:inline-flex;gap:6px;padding:6px;border:1px solid var(--line);background:var(--bg);border-radius:60px;margin-bottom:26px}
+.wtab{border:0;background:transparent;padding:12px 24px;border-radius:50px;font-weight:600;font-size:.96rem;color:var(--mute);display:inline-flex;align-items:center;gap:10px;transition:.25s}
+.wtab.on{background:var(--ac);color:#fff;box-shadow:0 10px 24px color-mix(in srgb,var(--ac) 40%,transparent)}
+.ufilters,.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{padding:8px 18px;border-radius:50px;border:1px solid var(--line);background:var(--bg2);font-size:.9rem;font-weight:500;color:var(--mute)}
+.chip:hover{border-color:var(--ac);color:var(--ink)}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid,.wgrid,.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card,.wcard,.fcard,.pcard{background:var(--bg2);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-align:left;padding:0;display:flex;flex-direction:column;transition:.25s}
+.card:hover,.wcard:hover,.fcard:hover,.pcard:hover{border-color:var(--ac);transform:translateY(-4px);box-shadow:0 18px 40px var(--glow)}
+.thumb,.wimg{aspect-ratio:16/10;overflow:hidden;background:var(--ac2);position:relative;border-bottom:1px solid var(--line)}
+.thumb img,.wimg img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
+.card:hover .thumb img{transform:scale(1.04)}
+.count{position:absolute;right:10px;bottom:10px;background:rgba(15,17,25,.75);color:#fff;font-size:.75rem;padding:3px 10px;border-radius:50px}
+.cb,.wb{padding:16px 18px 18px}
+.cb small,.wb small{color:var(--ac);font-weight:600;font-size:.8rem;display:block}
+.cb h3,.wb h3{font-size:1.1rem;margin:4px 0 6px}
+.cb p,.wb p{color:var(--mute);font-size:.9rem}
+.cb p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tk{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.tk span{font-size:.74rem;color:var(--mute);border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+.more{text-align:center;margin-top:32px}
+
+/* case studies */
+.case{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:44px;
+  align-items:center;
+  padding:38px 0;
+  border-top:1px solid var(--line);
+}
+.case:first-child{border-top:0;padding-top:0}
+.case:nth-child(even){grid-template-columns:1fr 1.1fr}
+.case:nth-child(even) .case-img{order:2}
+.case-img{
+  position:relative;
+  display:block;
+  width:100%;
+  padding:0;
+  aspect-ratio:16/11;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--ac2);
+  box-shadow:0 24px 60px rgba(20,23,31,.12);
+  overflow:hidden;
+  cursor:zoom-in;
+}
+.case-img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s}
+.case-img:hover img{transform:scale(1.04)}
+.case-img.contain img{object-fit:contain;object-position:center;padding:16px}
+.case-img.contain:hover img{transform:none}
+.case-zoom{
+  position:absolute;right:12px;bottom:12px;
+  display:grid;place-items:center;
+  width:36px;height:36px;border-radius:50%;
+  background:var(--bg2);border:1px solid var(--line);font-size:.85rem;
+}
+.ck{color:var(--ac);font-weight:600;font-size:.85rem}
+.case h3{font-size:clamp(1.6rem,3vw,2.2rem);margin:4px 0 16px}
+.cblk{margin-bottom:14px}
+.cblk h5{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:4px}
+.cblk p,.cblk li{color:var(--mute);font-size:.95rem}
+.cblk ul{padding-left:18px}
+.case .tk{margin:16px 0 18px}
+
+/* wrap up */
+.wrapup{
+  grid-column:1/-1;
+  order:3;
+  margin-top:8px;
+  padding:26px 28px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:linear-gradient(135deg,var(--ac2),transparent 70%),var(--bg);
+}
+.wrapup h4{display:flex;gap:10px;align-items:center;font-size:1.15rem;margin-bottom:16px}
+.wrapup h4 i{color:var(--ac)}
+.wu{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:20px}
+.wu h5{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:8px}
+.wu p{color:var(--mute);font-size:.93rem}
+.wu .tk{margin:0}
+
+/* wireframes, prototypes, front-end */
+.wf-ph{width:100%;height:100%;border:2px dashed var(--line);background:linear-gradient(var(--line),var(--line)) 8% 10%/84% 12% no-repeat,linear-gradient(var(--line),var(--line)) 8% 32%/38% 46% no-repeat,linear-gradient(var(--line),var(--line)) 52% 32%/40% 20% no-repeat,linear-gradient(var(--line),var(--line)) 52% 58%/40% 20% no-repeat,linear-gradient(var(--line),var(--line)) 8% 88%/84% 6% no-repeat}
+.pstage{position:relative;aspect-ratio:4/3;background:var(--ac2);display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.pstage iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.play{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:50px;border:0;background:var(--ac);color:#fff;font-weight:600;box-shadow:0 14px 34px color-mix(in srgb,var(--ac) 45%,transparent)}
+.pbtns,.fbtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.stk h6{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:14px 0 6px}
+.empty{grid-column:1/-1;padding:40px;border:2px dashed var(--line);border-radius:14px;text-align:center;color:var(--mute)}
+/* ============================================================ */
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.photo{aspect-ratio:1/1;border-radius:18px;overflow:hidden;background:var(--ac2);border:1px solid var(--line);box-shadow:0 30px 70px rgba(20,23,31,.15)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+.about h2{font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:16px}
+.about p{color:var(--mute);margin-bottom:14px}
+.ticks{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin:18px 0 26px;list-style:none;font-weight:500;font-size:.95rem}
+.ticks li::before{content:"\2713";color:var(--ac);margin-right:8px;font-weight:700}
+/* services */
+.cards4{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:center;gap:14px}
+.svc{background:var(--bg);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.svc:hover{transform:translateY(-6px);border-color:var(--ac);box-shadow:0 18px 40px var(--glow)}
+.svc .sh{aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line);background:var(--ac2)}
+.svc .sh img{width:100%;height:100%;object-fit:cover;object-position:top}
+.sb{padding:20px 22px 24px}
+.sb i{color:var(--ac);font-size:1.1rem;margin-bottom:10px}
+.sb h3{font-size:1.1rem;margin-bottom:8px}
+.sb p{color:var(--mute);font-size:.92rem}
+.ar{color:var(--ac);font-size:1.5rem;display:grid;place-items:center}
+.flow>*{opacity:0}
+.flow.go>*{opacity:1;animation:fin .7s cubic-bezier(.16,1,.3,1) backwards}
+.flow.go>.ar{animation-name:arin}
+.flow.go>:nth-child(1){animation-delay:0s}.flow.go>:nth-child(2){animation-delay:.7s}.flow.go>:nth-child(3){animation-delay:1.2s}.flow.go>:nth-child(4){animation-delay:1.9s}.flow.go>:nth-child(5){animation-delay:2.4s}.flow.go>:nth-child(6){animation-delay:3.1s}.flow.go>:nth-child(7){animation-delay:3.6s}
+.flow.go>.ar i{animation:nudge 1.4s ease-in-out 4.3s infinite}
+@keyframes fin{from{opacity:0;translate:0 30px;scale:.94}}
+@keyframes arin{from{opacity:0;scale:.4}}
+@keyframes nudge{50%{translate:6px 0}}
+/* process */
+.steps{position:relative;display:grid;grid-template-columns:repeat(5,1fr);margin-top:8px}
+.step{text-align:center;padding:0 14px;position:relative;z-index:1}
+.step:nth-of-type(even){margin-top:34px}
+.ic{width:64px;height:64px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;background:var(--bg2);border:2px solid var(--ac);color:var(--ac);font-size:1.4rem;box-shadow:0 10px 26px var(--glow);animation:wv 3.2s ease-in-out infinite}
+.step:nth-of-type(2) .ic{animation-delay:-.64s}.step:nth-of-type(3) .ic{animation-delay:-1.28s}.step:nth-of-type(4) .ic{animation-delay:-1.92s}.step:nth-of-type(5) .ic{animation-delay:-2.56s}
+@keyframes wv{50%{translate:0 -12px}}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{color:var(--mute);font-size:.88rem}
+.wave{position:absolute;left:0;top:0;width:100%;height:100px;z-index:0;fill:none;stroke:var(--ac);stroke-width:2;stroke-dasharray:6 8;opacity:.5}
+.wave path{vector-effect:non-scaling-stroke}
+/* skills */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.bar-top{display:flex;justify-content:space-between;font-weight:500;font-size:.95rem;margin-bottom:6px}
+.bar-top span+span{color:var(--mute);font-weight:400}
+.bar{height:6px;background:var(--line);border-radius:6px;overflow:hidden;margin-bottom:20px}
+.bar i{display:block;height:100%;background:var(--ac);border-radius:6px;transition:width 1.3s cubic-bezier(.16,1,.3,1)}
+.skills h3{font-size:1.15rem;margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.tags span{padding:6px 14px;border:1px solid var(--line);border-radius:50px;font-size:.86rem;background:var(--bg2)}
+.toolbox{margin-top:44px;padding-top:32px;border-top:1px solid var(--line)}
+.toolbox h3{font-size:1.15rem;margin-bottom:16px}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:12px}
+.tl2{display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 8px;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-size:.82rem;font-weight:500;color:var(--mute);transition:.25s}
+.tl2 i{font-size:1.5rem;color:var(--ink)}
+.tl2:hover{border-color:var(--ac);transform:translateY(-3px)}.tl2:hover i{color:var(--ac)}
+/* experience */
+.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.item{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.item:hover{transform:translateY(-6px);border-color:var(--ac);box-shadow:0 18px 40px var(--glow)}
+.item .k{font-size:.78rem;font-weight:600;color:var(--ac);margin-bottom:8px}
+.item h3{font-size:1.1rem}
+.item h4{font-family:Inter,sans-serif;font-size:.92rem;font-weight:500;color:var(--mute)}
+.item .d{font-size:.82rem;color:var(--mute);margin:4px 0 10px}
+.item ul{padding-left:18px;font-size:.9rem;color:var(--mute)}
+.item li{margin-bottom:6px}
+/* cta band */
+.band{background:var(--ink);color:var(--bg);border-radius:20px;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.band h2{font-size:clamp(1.5rem,3vw,2.1rem);max-width:520px;margin-bottom:8px}
+.band p{opacity:.75;max-width:520px}
+.band .cta{margin:0}
+.band .btn-g{background:transparent;color:inherit;border-color:rgba(128,128,128,.5)}
+#hire{padding:24px 0 88px}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:48px}
+.clist{display:grid;gap:12px;align-content:start}
+.cc{display:flex;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--bg2);text-decoration:none}
+a.cc:hover{border-color:var(--ac)}
+.cc i{width:38px;height:38px;border-radius:10px;background:var(--ac2);color:var(--ac);display:grid;place-items:center;flex:none}
+.cc small{display:block;color:var(--mute);font-size:.78rem}
+.cc b{font-weight:500;font-size:.93rem;word-break:break-word}
+form{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:14px}
+label{display:grid;gap:6px;font-size:.88rem;font-weight:500}
+input,textarea{font:inherit;padding:11px 14px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg);color:var(--ink);width:100%}
+textarea{min-height:120px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--ac);border-color:transparent}
+/* footer */
+.ft{position:relative;overflow:hidden;padding:64px 0 24px;background:var(--bg2);color:var(--mute);font-size:.92rem}
+.ft::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--ac),#0ea5e9,var(--ac))}
+.ft::after{content:"";position:absolute;width:380px;height:380px;right:-100px;top:-120px;border-radius:50%;background:var(--ac);opacity:.12;filter:blur(70px);pointer-events:none}
+.ft .wrap{position:relative;z-index:1}
+.ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+.ft-brand .logo{color:var(--ink)}
+.ft-brand p{max-width:340px;margin:10px 0 18px}
+.soc{display:flex;gap:10px}
+.ft-col{display:grid;gap:10px;align-content:start}
+.ft-col h4{color:var(--ink);font-size:1.05rem;margin-bottom:4px}
+.ft-col a{text-decoration:none}.ft-col a:hover{color:var(--ac)}
+.ft-big{font-family:Fraunces,serif;font-weight:600;font-size:clamp(4rem,16vw,12rem);line-height:.9;text-align:center;margin:36px 0 10px;background:linear-gradient(180deg,color-mix(in srgb,var(--ac) 35%,transparent),transparent 85%);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none}
+.ft-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:18px;border-top:1px solid var(--line)}
+.ft-bot i{color:#e11d48}
+#top{position:fixed;right:20px;bottom:20px;z-index:60;opacity:0;pointer-events:none;transform:translateY(10px);transition:.3s;box-shadow:0 8px 24px rgba(20,23,31,.15)}
+#top.vis{opacity:1;pointer-events:auto;transform:none}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+/* viewer */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,11,16,.94);display:none;color:#fff}
+.lb.show{display:grid;grid-template-columns:1fr 340px;grid-template-rows:56px 1fr auto}
+.lb-top{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid rgba(255,255,255,.1)}
+.lb-top b{font-family:Fraunces,serif;font-weight:600}
+.lb-top button,.lb-nav button{background:rgba(255,255,255,.1);border:0;border-radius:8px;width:36px;height:36px;color:#fff}
+.lb-top button:hover,.lb-nav button:hover{background:var(--ac)}
+.lb-stage{overflow:auto;padding:20px;display:flex;justify-content:center;align-items:flex-start}
+.lb-stage img{max-width:100%;height:auto;border-radius:6px}
+.lb-nav{grid-column:1;display:flex;gap:10px;align-items:center;justify-content:center;padding:10px;overflow-x:auto}
+.lb-nav .t{width:64px;height:44px;padding:0;border:2px solid transparent;overflow:hidden;opacity:.6}
+.lb-nav .t.on{border-color:#fff;opacity:1}
+.lb-nav .t img{width:100%;height:100%;object-fit:cover;object-position:top}
+.lb-info{grid-column:2;grid-row:2/4;border-left:1px solid rgba(255,255,255,.1);padding:24px;overflow:auto}
+.lb-info small{color:#b7bcff;font-weight:600}
+.lb-info h2{font-size:1.4rem;margin:6px 0 10px}
+.lb-info p{color:rgba(255,255,255,.75);font-size:.92rem;margin-bottom:14px}
+.lb-info h5{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:6px;font-weight:600}
+.lb-info .tg{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.lb-info .tg span{border:1px solid rgba(255,255,255,.2);border-radius:50px;padding:4px 12px;font-size:.8rem}
+/* responsive */
+@media(max-width:960px){
+ .case,.case:nth-child(even){grid-template-columns:1fr;gap:24px}.case:nth-child(even) .case-img{order:0}
+ .grid,.wgrid,.fgrid,.tl{grid-template-columns:1fr 1fr}.pgrid{grid-template-columns:1fr}
+ .cards4{grid-template-columns:1fr;gap:10px}.ar{transform:rotate(90deg)}
+ .steps{grid-template-columns:1fr 1fr;gap:28px 16px}.step:nth-of-type(even){margin-top:0}.wave{display:none}
+ .band{padding:32px 26px}
+}
+@media(max-width:820px){
+ .menu{position:fixed;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px 16px;display:none}
+ .menu.open{display:flex}.menu a{display:block;padding:12px 0}
+ #burger{display:inline-grid}
+ .hero,.about,.skills,.contact{grid-template-columns:1fr}
+ .girl{max-width:340px;transform:none}
+ section{padding:64px 0}
+ .wall{grid-template-columns:repeat(3,1fr);opacity:.28}.wcol:nth-child(n+4){display:none}
+ .ft-top{grid-template-columns:1fr 1fr}.ft-brand{grid-column:1/-1}
+ .lb.show{grid-template-columns:1fr;grid-template-rows:56px 1fr auto auto}
+ .lb-info{grid-column:1;grid-row:4;border-left:0;border-top:1px solid rgba(255,255,255,.1);max-height:34vh}
+}
+@media(max-width:600px){.grid,.wgrid,.fgrid,.tl,.ticks,.steps{grid-template-columns:1fr}.wtabs{display:flex;width:100%}.wtab{flex:1;justify-content:center;padding:12px 10px;font-size:.86rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.flow>*,.rv{opacity:1;transform:none}}
+
+/* ===== v5: professional refinement ===== */
+html{overflow-anchor:none}
+body{overflow-x:clip}
+section{padding:80px 0}
+.sec-head{margin-bottom:44px}
+.sec-head h2::after{width:40px;height:3px;background:var(--ac)}
+#home{min-height:0;display:block;padding:56px 0 80px;background:radial-gradient(900px 400px at 88% -10%,var(--ac2),transparent 70%)}
+#home .fx,.wall,.wall-shade,.gchip,.blob{display:none}
+.hero{gap:64px;align-items:center}
+.role{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+.hero h1{background:none;color:var(--ink);-webkit-text-fill-color:var(--ink);font-size:clamp(2.3rem,4.6vw,3.5rem);line-height:1.1}
+.lead{font-size:1.05rem}
+.stats{margin-top:0}
+.stats b{background:none;color:var(--ink);-webkit-text-fill-color:var(--ink);font-size:clamp(1.7rem,3.6vw,2.4rem)}
+.girl{transform:none;max-width:400px;padding:0}
+.girl::before{display:none}
+.gframe{border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 60px rgba(20,23,31,.12)}
+.mq{background:var(--ink);color:var(--bg);padding:18px 0}
+.mq-item,.mq-item:nth-child(even){font-family:Inter,system-ui,sans-serif;font-weight:500;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bg);-webkit-text-stroke:0;gap:26px;padding-right:26px}
+.mq-item::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--ac);font-size:0}
+.btn-p,.wtab.on,.play{box-shadow:none}
+.card:hover,.wcard:hover,.fcard:hover,.pcard:hover,.svc:hover,.item:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(20,23,31,.08)}
+.ic{animation:none;box-shadow:none}
+.wave{opacity:.35}
+.sic i{animation:none}
+.sc::before{display:none}
+.band{border-radius:16px}
+.ft::after{display:none}
+.ft-big{margin:24px 0 0;font-size:clamp(3rem,12vw,8rem)}
+@media(max-width:820px){#home{padding:40px 0 56px}section{padding:56px 0}.girl{max-width:340px}}
+
+/* ===== v6: centered work header, new sections ===== */
+.eyebrow{display:block;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:600;color:var(--ac);margin-bottom:10px}
+#work .sec-head{max-width:none;text-align:center}
+#work .sec-head p{max-width:620px;margin-inline:auto}
+#work .sec-head h2::after{margin-inline:auto}
+@media(min-width:601px){.wtabs{display:flex;width:max-content;max-width:100%;margin:0 auto 26px}}
+.ufilters,.filters{justify-content:center}
+.btn-p{background:linear-gradient(135deg,var(--ac),#6d5df6)}
+#home{background:radial-gradient(700px 360px at 90% -10%,color-mix(in srgb,var(--ac) 16%,transparent),transparent 70%),radial-gradient(600px 320px at -5% 100%,color-mix(in srgb,#0ea5e9 12%,transparent),transparent 70%)}
+.girl{isolation:isolate}
+.girl::after{content:"";position:absolute;inset:16px -14px -14px 16px;border:2px solid var(--ac);border-radius:22px;opacity:.35;z-index:-1}
+#why{padding-top:0}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.wy{padding:26px;border:1px solid var(--line);border-radius:14px;background:var(--bg2);transition:.3s}
+.wy:hover{border-color:var(--ac);transform:translateY(-2px);box-shadow:0 12px 28px rgba(20,23,31,.08)}
+.wy i{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--ac2);color:var(--ac);margin-bottom:14px}
+.wy h3{font-size:1.05rem;margin-bottom:6px}
+.wy p{color:var(--mute);font-size:.92rem}
+@media(max-width:960px){.why{grid-template-columns:1fr 1fr}.wu{grid-template-columns:1fr}}
+@media(max-width:600px){.why{grid-template-columns:1fr}.wrapup{padding:22px 18px}}
+</style>
+</head>
+<body>
+
+<!-- ================= SPLASH ================= -->
+<div class="splash" id="splash" role="dialog" aria-modal="true" aria-label="Welcome">
+  <div class="fx" aria-hidden="true">
+    <span class="blob" style="width:420px;height:420px;left:-120px;top:-100px"></span>
+    <span class="blob b2" style="width:380px;height:380px;right:-100px;bottom:-120px"></span>
+  </div>
+  <div class="sc">
+    <div class="av"><img src="girl1.png" alt="Anshika Shrivastava"></div>
+    <h2>Anshika Shrivastava</h2>
+    <p class="sr"><span id="typed"></span><i class="caret"></i></p>
+    <div class="sic" aria-hidden="true">
+      <i class="fa-brands fa-figma"></i><i class="fa-solid fa-pen-ruler"></i><i class="fa-solid fa-code"></i><i class="fa-brands fa-react"></i>
+    </div>
+    <div class="sk"><span>Figma</span><span>UI design</span><span>UX flows</span><span>Prototyping</span><span>React.js</span></div>
+    <button class="btn btn-p" id="enter">View portfolio <i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+</div>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#home">Anshika Shrivastava</a>
+    <ul class="menu" id="menu">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="tools">
+      <button class="ib" id="theme" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <button class="ib" id="burger" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section id="home">
+  <div class="fx" aria-hidden="true">
+    <span class="blob" style="width:420px;height:420px;left:-120px;top:-100px"></span>
+    <span class="blob b2" style="width:360px;height:360px;right:-100px;bottom:-120px"></span>
+  </div>
+  <div class="wall" id="wall" aria-hidden="true"></div>
+  <div class="wall-shade" aria-hidden="true"></div>
+  <div class="wrap hero">
+    <div>
+      <span class="avail"><i></i>Open to UI/UX and Product Designer and front-end roles</span>
+      <p class="role" id="role">UI/UX Designer</p>
+      <h1>I design products in Figma and build them in code.</h1>
+      <p class="lead">UI/UX designer and front-end developer. I take a product from user flow to a working, responsive interface, with experience across design internships, freelance work and a front-end role.</p>
+      <div class="cta">
+        <a href="#work" class="btn btn-p">View selected work</a>
+        <a href="Anshika_Shrivastava_UIUX_Resume%20(5).pdf" download class="btn btn-g"><i class="fa-solid fa-download"></i> Resume</a>
+        <a href="#contact" class="btn btn-g">Contact</a>
+      </div>
+      <div class="stats">
+        <div><b><span class="n" data-count="20">0</span>+</b><span>Projects designed and built</span></div>
+        <div><b><span class="n" data-count="3">0</span></b><span>Roles and internships</span></div>
+        <div><b><span class="n" data-count="1.7" data-dec="1">0</span></b><span>Years of experience</span></div>
+      </div>
+    </div>
+    <div class="girl">
+      <div class="gframe"><img src="girl1.png" alt="Portrait of Anshika Shrivastava"></div>
+      <span class="gchip g1"><i class="fa-brands fa-figma"></i> Figma</span>
+      <span class="gchip g2"><i class="fa-solid fa-code"></i> Front-end</span>
+      <span class="gchip g3"><i class="fa-solid fa-pen-ruler"></i> UX flows</span>
+    </div>
+  </div>
+</section>
+
+<section class="mq" aria-label="Skills"><div class="mq-track" id="mqT"></div></section>
+
+<!-- ================= WORK ================= -->
+<section id="work" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>My work</h2>
+      <p>Case studies, wireframes and prototypes from my design process, plus the interfaces I have built in code.</p>
+    </div>
+
+    <div class="wtabs" id="wtabs" role="tablist" aria-label="Work type">
+      <button class="wtab on" role="tab" aria-selected="true" data-t="ux"><i class="fa-solid fa-pen-ruler"></i> UI/UX design work</button>
+      <!-- <button class="wtab" role="tab" aria-selected="false" data-t="fe"><i class="fa-solid fa-code"></i> Front-end work</button> -->
+    </div>
+
+    <div id="pane-ux">
+      <div class="ufilters" id="uxf" role="tablist" aria-label="Design work type">
+        <button class="chip on" role="tab" aria-selected="true" data-u="cases">Case studies</button>
+        <button class="chip" role="tab" aria-selected="false" data-u="screens">UI screens</button>
+        <!-- <button class="chip" role="tab" aria-selected="false" data-u="wires">Wireframes</button> -->
+        <!-- <button class="chip" role="tab" data-u="protos">Prototypes</button> -->
+      </div>
+
+      <div id="u-cases" class="upane"></div>
+
+      <div id="u-screens" class="upane" hidden>
+        <div class="filters" id="filters" role="tablist" aria-label="Filter projects"></div>
+        <div class="grid" id="grid"></div>
+        <div class="more"><button class="btn btn-g" id="more"></button></div>
+      </div>
+
+      <div id="u-wires" class="upane" hidden></div>
+      <div id="u-protos" class="upane" hidden></div>
+    </div>
+
+    <div id="pane-fe" hidden><div class="fgrid" id="fgrid"></div></div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap about">
+    <div class="photo"><img src="girl3.jpg" alt="Anshika at work" loading="lazy" onerror="this.onerror=null;this.src='girl1.png'"></div>
+    <div>
+      <h2>Design that people don't have to think about.</h2>
+      <p>I'm a UI/UX designer and front-end developer who turns complex ideas into simple, usable interfaces. Good design is less about how a product looks and more about understanding people and removing friction from what they are trying to do.</p>
+      <p>I start with user needs and clear flows, move through wireframes and interactive prototypes, and finish with high-fidelity screens in Figma. Because I also build with HTML, CSS, JavaScript and React, my designs are made with implementation in mind.</p>
+      <ul class="ticks">
+        <li>User flows and wireframes</li><li>Figma prototypes</li><li>Design systems</li><li>Responsive front-end</li>
+        <li>Dashboard and mobile app design</li><li>User research and usability testing</li><li>Accessibility basics</li><li>Clean developer handoff</li>
+        <li>Design to code with React</li><li>Feedback-driven iteration</li>
+      </ul>
+      <a href="#contact" class="btn btn-p">Let's work together</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section id="why">
+  <div class="wrap">
+    <div class="why">
+      <div class="wy"><i class="fa-solid fa-layer-group"></i><h3>Design and code</h3><p>I design in Figma and build in HTML, CSS, JavaScript and React, so every design is feasible from day one.</p></div>
+      <div class="wy"><i class="fa-solid fa-route"></i><h3>End-to-end ownership</h3><p>From user flows and wireframes to prototypes and a working, responsive interface.</p></div>
+      <div class="wy"><i class="fa-solid fa-handshake"></i><h3>Smooth developer handoff</h3><p>Reusable components, design systems and clear specs that keep builds consistent.</p></div>
+      <div class="wy"><i class="fa-solid fa-comments"></i><h3>Feedback driven</h3><p>I refine work through reviews and usability feedback to improve navigation and accessibility.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="sec-head"><h2>What I do</h2><p>From the first sketch to the final build.</p></div>
+    <div class="cards4 flow" id="flow">
+      <div class="svc"><div class="sh"><img src="Game Dashboard 1.png" alt="Dashboard UI design" loading="lazy"></div><div class="sb"><i class="fa-solid fa-palette"></i><h3>UI design</h3><p>Consistent web and mobile screens with deliberate type, colour and spacing.</p></div></div>
+      <div class="ar"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="svc"><div class="sh"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb8gtF_8pX6EQjgdIJGp_OxZRd9gv4PhRKU9BWiej9xw&s=10" alt="Task flow screens" loading="lazy"></div><div class="sb"><i class="fa-solid fa-diagram-project"></i><h3>UX flows and wireframes</h3><p>User journeys and wireframes that settle structure early and surface friction.</p></div></div>
+      <div class="ar"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="svc"><div class="sh"><img src="Nova Design System Style Guide.png" alt="Design system style guide" loading="lazy"></div><div class="sb"><i class="fa-brands fa-figma"></i><h3>Prototypes and design systems</h3><p>Clickable prototypes and reusable components that keep products consistent.</p></div></div>
+      <div class="ar"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="svc"><div class="sh"><img src="landing1.png" alt="Coded login page" loading="lazy"></div><div class="sb"><i class="fa-solid fa-laptop-code"></i><h3>Design to code</h3><p>Responsive HTML, CSS, JavaScript and React builds with API integration.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head"><h2>How I work</h2><p>Five steps that keep each project tied to real user needs.</p></div>
+    <div class="steps">
+      <svg class="wave" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true"><path d="M100 32 C200 32,200 66,300 66 S400 32,500 32 S600 66,700 66 S800 32,900 32"/></svg>
+      <div class="step"><div class="ic"><i class="fa-solid fa-bullseye"></i></div><h3>Understand</h3><p>Goals, users, constraints and what success looks like.</p></div>
+      <div class="step"><div class="ic"><i class="fa-solid fa-magnifying-glass"></i></div><h3>Research</h3><p>Pain points, competitor review and user flows.</p></div>
+      <div class="step"><div class="ic"><i class="fa-solid fa-table-columns"></i></div><h3>Wireframe</h3><p>Low-fidelity layouts to settle structure quickly.</p></div>
+      <div class="step"><div class="ic"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>Prototype</h3><p>High-fidelity, interactive Figma screens.</p></div>
+      <div class="step"><div class="ic"><i class="fa-solid fa-code"></i></div><h3>Build and refine</h3><p>Front-end code, testing, fixes and a clean handoff.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="alt">
+  <div class="wrap">
+    <div class="sec-head"><h2>Skills and tools</h2></div>
+    <div class="skills">
+      <div id="bars">
+        <div class="bar-top"><span>Figma</span><span>Advanced</span></div><div class="bar"><i style="width:90%"></i></div>
+        <div class="bar-top"><span>UI design</span><span>Advanced</span></div><div class="bar"><i style="width:92%"></i></div>
+        <div class="bar-top"><span>UX research and flows</span><span>Advanced</span></div><div class="bar"><i style="width:85%"></i></div>
+        <div class="bar-top"><span>Prototyping</span><span>Advanced</span></div><div class="bar"><i style="width:88%"></i></div>
+        <div class="bar-top"><span>Design systems</span><span>Intermediate</span></div><div class="bar"><i style="width:80%"></i></div>
+        <div class="bar-top"><span>Product thinking</span><span>Intermediate</span></div><div class="bar"><i style="width:75%"></i></div>
+        <div class="bar-top"><span>HTML5 and CSS3</span><span>Advanced</span></div><div class="bar"><i style="width:90%"></i></div>
+        <div class="bar-top"><span>JavaScript</span><span>Intermediate</span></div><div class="bar"><i style="width:70%"></i></div>
+        <div class="bar-top"><span>React.js</span><span>Intermediate</span></div><div class="bar"><i style="width:65%"></i></div>
+      </div>
+      <div>
+        <h3>Product design</h3>
+        <div class="tags"><span>Product thinking</span><span>Problem framing</span><span>Competitor analysis</span><span>Feature prioritisation</span><span>Design handoff</span></div>
+        <h3>UX design</h3>
+        <div class="tags"><span>User research</span><span>Personas</span><span>User flows</span><span>Information architecture</span><span>Wireframing</span><span>Prototyping</span><span>Usability testing</span><span>Accessibility basics</span></div>
+        <h3>UI design</h3>
+        <div class="tags"><span>High-fidelity UI</span><span>Design systems</span><span>Components and variants</span><span>Visual hierarchy</span><span>Typography</span><span>Colour theory</span><span>Responsive design</span><span>Dashboard design</span><span>Mobile-first design</span></div>
+        <h3>Development</h3>
+        <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>React.js</span><span>Git and GitHub</span><span>Postman</span></div>
+      </div>
+    </div>
+    <div class="toolbox">
+      <h3>Tools I work with</h3>
+      <div class="tgrid">
+        <div class="tl2"><i class="fa-brands fa-figma"></i>Figma</div>
+        <div class="tl2"><i class="fa-solid fa-code"></i>VS Code</div>
+        <div class="tl2"><i class="fa-brands fa-github"></i>GitHub</div>
+        <div class="tl2"><i class="fa-brands fa-react"></i>React</div>
+        <div class="tl2"><i class="fa-brands fa-html5"></i>HTML5</div>
+        <div class="tl2"><i class="fa-brands fa-css3-alt"></i>CSS3</div>
+        <div class="tl2"><i class="fa-brands fa-js"></i>JavaScript</div>
+        <div class="tl2"><i class="fa-brands fa-bootstrap"></i>Bootstrap</div>
+        <div class="tl2"><i class="fa-solid fa-paper-plane"></i>Postman</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><h2>Experience and education</h2></div>
+    <div class="tl">
+      <div class="item"><div class="k">Experience</div><h3>Tree Multisoft Services</h3><h4>Design-to-Code Developer</h4><div class="d">Jun 2026 – Sep 2026</div>
+        <ul><li>Turned UI/UX designs into front-end interfaces with HTML5, CSS3 and JavaScript, including responsive data dashboards.</li><li>Delivered consistent layouts across 3+ device types, screen sizes and browsers.</li><li>Worked with backend teams on API and database integration and fixed performance issues to improve load speed.</li></ul></div>
+      <div class="item"><div class="k">Experience</div><h3>Freelance UI/UX Designer</h3><h4>Self-employed</h4><div class="d">Jan 2025 – Dec 2025</div>
+        <ul><li>Designed student management dashboards in Figma with clear navigation and fast access to student records.</li><li>Created wireframes, prototypes and forms that simplify data entry, editing and record management.</li><li>Built reusable UI components and responsive layouts for a consistent experience.</li></ul></div>
+      <div class="item"><div class="k">Experience</div><h3>InternPe</h3><h4>UI/UX Designer Intern</h4><div class="d">Jul 2024 – Sep 2024</div>
+        <ul><li>Designed user flows, wireframes and interactive prototypes in Figma.</li><li>Created UI with clear visual hierarchy, consistent layouts and interactive elements.</li><li>Refined designs through feedback, improving navigation, accessibility and overall usability.</li></ul></div>
+      <div class="item"><div class="k">Education</div><h3>B.Tech, Computer Science Engineering</h3><h4>Quantum University, Roorkee</h4><div class="d">Sep 2022 – Aug 2026 · CGPA 8.6</div><ul><li>Open elective in Robotics and Automation.</li></ul></div>
+      <div class="item"><div class="k">Certificates</div><h3>Key certificates</h3><div class="d">&nbsp;</div><ul><li>UI/UX, Mind Luster</li><li>AI Fundamentals, IBM</li><li>Introduction to GenAI, Simplilearn (powered by Google)</li><li>Product Management, GeeksforGeeks</li></ul></div>
+      <div class="item"><div class="k">Activities</div><h3>Beyond the classroom</h3><div class="d">&nbsp;</div><ul><li>Hack2Skill, powered by Google</li><li>IoT Workshop, Gurukul event</li><li>Management assistant, Shrijan Startup Mela</li><li>Core member, Startup Club</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HIRE BAND ================= -->
+<section id="hire">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>Have a role or project in mind?</h2>
+        <p>I'm looking for junior UI/UX, product design and front-end opportunities. I can take a feature from user flow and Figma prototype to a responsive, working interface.</p>
+      </div>
+      <div class="cta">
+        <a class="btn btn-p" href="#contact">Start a conversation</a>
+        <a class="btn btn-g" href="mailto:shrivastavanshika95@gmail.com"><i class="fa-solid fa-envelope"></i> Email me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="alt">
+  <div class="wrap">
+    <div class="sec-head"><h2>Get in touch</h2><p>Open to junior UI/UX, product design and front-end roles, and to new projects.</p></div>
+    <div class="contact">
+      <div class="clist">
+        <a class="cc" href="mailto:shrivastavanshika95@gmail.com"><i class="fa-solid fa-envelope"></i><div><small>Email</small><b>shrivastavanshika95@gmail.com</b></div></a>
+        <a class="cc" href="tel:+919368313920"><i class="fa-solid fa-phone"></i><div><small>Phone</small><b>+91 9368313920</b></div></a>
+        <a class="cc" href="https://www.linkedin.com/in/anshika-shrivastava-277241251/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i><div><small>LinkedIn</small><b>anshika-shrivastava</b></div></a>
+        <a class="cc" href="https://github.com/anshikashri9368" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><div><small>GitHub</small><b>anshikashri9368</b></div></a>
+        <div class="cc"><i class="fa-solid fa-location-dot"></i><div><small>Location</small><b>Haridwar, Uttarakhand, India</b></div></div>
+      </div>
+      <form id="cf">
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>Message<textarea name="msg" required placeholder="Tell me about your project or role"></textarea></label>
+        <button class="btn btn-p" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="logo" href="#home">Anshika Shrivastava</a>
+        <p>UI/UX designer and front-end developer. I design in Figma and build in code.</p>
+        <div class="soc">
+          <a class="ib" href="https://www.linkedin.com/in/anshika-shrivastava-277241251/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a class="ib" href="https://github.com/anshikashri9368" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a class="ib" href="mailto:shrivastavanshika95@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="ft-col"><h4>Explore</h4><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#process">Process</a></div>
+      <div class="ft-col"><h4>Connect</h4><a href="mailto:shrivastavanshika95@gmail.com">shrivastavanshika95@gmail.com</a><a href="tel:+919368313920">+91 9368313920</a><span>Haridwar, Uttarakhand</span></div>
+    </div>
+    <div class="ft-big" aria-hidden="true">ANSHIKA</div>
+    <div class="ft-bot"><span>© 2026 Anshika Shrivastava</span><span>Designed in Figma · Built with code</span></div>
+  </div>
+</footer>
+
+<button class="ib" id="top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ================= VIEWER ================= -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Project viewer">
+  <div class="lb-top">
+    <b id="lbT"></b>
+    <div><button id="lbX" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+  </div>
+  <div class="lb-stage" id="lbS"><img id="lbI" alt=""></div>
+  <div class="lb-nav" id="lbN"></div>
+  <aside class="lb-info" id="lbInfo"></aside>
+</div>
+
+<script>
+/* ============================================================
+   HELPERS
+   ============================================================ */
+const $ = (id) => document.getElementById(id);
+const esc = (s) =>
+  String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const chips = (list) => list.map((x) => `<span>${esc(x)}</span>`).join('');
+
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const T = ['Figma', 'UI design', 'Prototyping'];
+const GH = 'https://github.com/anshikashri9368';
+const fg = (id, n) => `https://www.figma.com/design/${id}/Untitled?node-id=${n}&m=dev`;
+
+/* ============================================================
+   UI SCREENS  (add a project by copying one line)
+   NOTE: duplicate / missing Figma links are marked with TODO
+   ============================================================ */
+const WORKS = [
+  /* TODO: image ka naam aur Figma link add karo */
+  { title: 'Pharma Company Platform', sub: 'Pharma', category: 'Web', tools: T, description: 'A web interface for managing pharma products, orders and records.', role: 'UI/UX design', images: ['AuraPharma Enterprise Landing Page.png'] },
+  { title: 'Spending Manager', sub: 'Fintech app', category: 'Mobile', tools: T, link: fg('MiKO4dOpGfsofticTLvlbL', '8-2'), description: 'A mobile app for managing spending, built around clear financial overviews.', role: 'UI/UX design', images: ['phone 2.png'] },
+  { title: 'Gaming Dashboard', category: 'Dashboard', tools: T, link: fg('eeEtXfbnAvQ907E8iEhFMu', '1-2'), description: 'A dashboard for tracking and organising game-related activity.', role: 'UI/UX design', images: ['Game Dashboard 1.png'] },
+  { title: 'Food Court Dashboard', category: 'Dashboard', tools: T, link: fg('Lpd5lhP9ogY0rzTPYZfDFe', '1-142'), description: 'An operations dashboard for a food court.', role: 'UI/UX design', images: ['AETHER - Main Dashboard.png', 'Aether Dashboard (Desktop).png', 'Frame 6.png'] },
+  { title: 'Borrow Smarter', sub: 'Wealthtech', category: 'Web', tools: ['Figma', 'UI design', 'Data visualisation', 'Prototyping'], link: fg('xw5jUGfKgkzQfFlrb91qhb', '0-1'), description: 'A portfolio tracker for monitoring holdings, returns and performance across stocks, funds and other assets.', role: 'UI/UX design', images: ['borrow smarter.png'] },
+  { title: 'Finpilot', sub: 'Wealthtech', category: 'Web', tools: T, link: fg('O59KRpEUhgE6a0Bf1QC8xz', '2-3737'), description: 'A planner for exploring mutual funds, setting up SIPs and tracking progress towards financial goals.', role: 'UI/UX design', images: ['FinPilot - Financial Health Dashboard.png'] },
+  { title: 'Task flow management tool', category: 'Web', tools: ['Figma', 'UI design', 'Design systems', 'Prototyping'], link: fg('j2bPBsNc115glvTwA8Hxn3', '4-2'), description: 'A tool for organising and tracking workflow processes.', role: 'UI/UX design', images: ['to do (2).png'] },
+  { title: 'Fintech dashboard', category: 'Dashboard', tools: T, link: fg('Lpd5lhP9ogY0rzTPYZfDFe', '8-2'), description: 'A dashboard for managing financial operations.', role: 'UI/UX design', images: ['web2.png'] },
+  { title: 'Company dashboard', category: 'Dashboard', tools: T, link: fg('Ov4zGwXdtSj6yiYz8cToOt', '15-3'), description: 'A dashboard for managing business operations.', role: 'UI/UX design', images: ['web.png'] },
+  { title: 'Shoe store dashboard', category: 'Dashboard', tools: T, link: fg('lhaucRmcD9v7VCySLMFGx9', '0-1'), description: 'A dashboard for managing inventory and sales.', role: 'UI/UX design', images: ['Frame 14.png', 'shoe.jpg'] },
+  /* TODO: same link as Shoe store dashboard, replace with its own Figma link */
+  { title: 'Home Automation System', category: 'Dashboard', tools: T, link: fg('lhaucRmcD9v7VCySLMFGx9', '0-1'), description: 'A dashboard for managing smart home devices.', role: 'UI/UX design', images: ['home automation.png'] },
+  /* TODO: add Figma link */
+  { title: 'Job Portal dashboard', category: 'Dashboard', tools: T, description: 'A dashboard for managing job listings and applications.', role: 'UI/UX design', images: ['Screenshot 2026-10-12 101212.jpg'] },
+  /* TODO: same link as Company dashboard, replace with its own Figma link */
+  { title: 'Company Portfolio app', category: 'Mobile', tools: T, link: fg('Ov4zGwXdtSj6yiYz8cToOt', '15-3'), description: "A mobile app focused on showcasing a company's work and experience.", role: 'UI/UX design', images: ['phone1.png'] },
+  { title: 'Fashion e-commerce app', category: 'Mobile', tools: T, link: fg('DDiQZYxnGrA3yAVwQiDxJb', '25-2'), description: 'A shopping app focused on product discovery and a smooth checkout experience.', role: 'UI/UX design', images: ['phone 3.png'] },
+  /* TODO: add Figma link */
+  { title: 'Sign-up and login flow', category: 'Mobile', tools: T, description: 'Onboarding and authentication screens for a mobile app.', role: 'UI/UX design', images: ['phone 4.png'] },
+  {
+    title: 'Design system components',
+    sub: 'Tokens, type, buttons, forms',
+    category: 'Design system',
+    tools: ['Figma', 'Design systems', 'Typography', 'Components'],
+    description: 'Reusable colour palettes and tokens, a typography scale, button states and form inputs for consistent UI.',
+    role: 'UI design',
+    images: [
+      'Nova Design System Style Guide.png', 'Aura Design System UI Kit.png',
+      'Minimal Type Scale Design System.png', 'Button Design System States.png', 'Form Inputs UI Component Guide.png', 'Colour Tokens Design System Poster.png',
+    ],
+  },
+];
+
+const LIMIT = 6;
+let filter = 'All', all = false, view = [];
+const grid = $('grid'), fEl = $('filters'), moreB = $('more');
+
+fEl.innerHTML = ['All', ...new Set(WORKS.map((w) => w.category))]
+  .map((c) => `<button class="chip" role="tab" data-c="${esc(c)}">${esc(c)}</button>`)
+  .join('');
+
+function render() {
+  const list = filter === 'All' ? WORKS : WORKS.filter((w) => w.category === filter);
+  view = list;
+  const shown = all ? list : list.slice(0, LIMIT);
+
+  grid.innerHTML = shown
+    .map(
+      (w) => `
+    <button class="card" data-i="${list.indexOf(w)}" aria-label="Open ${esc(w.title)}">
+      <div class="thumb">
+        <img src="${esc(w.images[0])}" alt="${esc(w.title)}" loading="lazy">
+        ${w.images.length > 1 ? `<span class="count">${w.images.length} screens</span>` : ''}
+      </div>
+      <div class="cb">
+        <small>${esc(w.category)}${w.sub ? ' · ' + esc(w.sub) : ''}</small>
+        <h3>${esc(w.title)}</h3>
+        <p>${esc(w.description)}</p>
+        <div class="tk">${chips(w.tools.slice(0, 3))}</div>
+      </div>
+    </button>`
+    )
+    .join('');
+
+  fEl.querySelectorAll('.chip').forEach((b) => {
+    const on = b.dataset.c === filter;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-selected', on);
+  });
+
+  const extra = list.length - LIMIT;
+  moreB.parentElement.style.display = extra > 0 ? '' : 'none';
+  moreB.textContent = all ? 'Show fewer projects' : `View all projects (${extra} more)`;
+}
+
+fEl.onclick = (e) => {
+  const b = e.target.closest('.chip');
+  if (!b) return;
+  filter = b.dataset.c;
+  all = false;
+  render();
+};
+moreB.onclick = () => {
+  all = !all;
+  render();
+  if (!all) $('work').scrollIntoView();
+};
+grid.onclick = (e) => {
+  const c = e.target.closest('.card');
+  if (c) openLB(+c.dataset.i, c);
+};
+render();
+
+/* ============================================================
+   VIEWER (lightbox)
+   ============================================================ */
+const lb = $('lb');
+let cw = 0, ci = 0, opener = null, cur = [];
+
+function openLB(i, el, list) {
+  cur = list || view;
+  cw = i;
+  ci = 0;
+  opener = el;
+  lb.classList.add('show');
+  document.body.style.overflow = 'hidden';
+  show();
+  $('lbX').focus();
+}
+
+function closeLB() {
+  lb.classList.remove('show');
+  document.body.style.overflow = '';
+  if (opener) opener.focus();
+}
+
+function show() {
+  const w = cur[cw];
+  const count = w.images.length;
+
+  $('lbT').textContent = w.title + (count > 1 ? `  (${ci + 1}/${count})` : '');
+
+  const im = $('lbI');
+  im.src = w.images[ci];
+  im.alt = w.title;
+  $('lbS').scrollTop = 0;
+
+  $('lbN').innerHTML =
+    count > 1
+      ? w.images
+          .map(
+            (u, k) => `
+        <button class="t ${k === ci ? 'on' : ''}" data-k="${k}" aria-label="Image ${k + 1}">
+          <img src="${esc(u)}" alt="">
+        </button>`
+          )
+          .join('')
+      : '';
+
+  $('lbInfo').innerHTML = `
+    <small>${esc(w.category)}</small>
+    <h2>${esc(w.title)}</h2>
+    <p>${esc(w.description)}</p>
+    ${w.role ? `<h5>My role</h5><p>${esc(w.role)}</p>` : ''}
+    ${w.tools?.length ? `<h5>Tools and skills</h5><div class="tg">${chips(w.tools)}</div>` : ''}
+    ${w.link ? `<a class="btn btn-p" href="${esc(w.link)}" target="_blank" rel="noopener">Open in Figma</a>` : ''}`;
+}
+
+$('lbN').onclick = (e) => {
+  const t = e.target.closest('.t');
+  if (t) { ci = +t.dataset.k; show(); }
+};
+$('lbX').onclick = closeLB;
+lb.addEventListener('click', (e) => { if (e.target === lb) closeLB(); });
+
+document.addEventListener('keydown', (e) => {
+  if (!lb.classList.contains('show')) return;
+  const n = cur[cw].images.length;
+  if (e.key === 'Escape') closeLB();
+  if (e.key === 'ArrowRight') { ci = (ci + 1) % n; show(); }
+  if (e.key === 'ArrowLeft') { ci = (ci - 1 + n) % n; show(); }
+});
+
+/* ============================================================
+   NAV, THEME, SCROLL
+   ============================================================ */
+const menu = $('menu'), burger = $('burger');
+
+burger.onclick = () => {
+  const o = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', o);
+};
+menu.querySelectorAll('a').forEach((a) => {
+  a.onclick = () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); };
+});
+
+const navObs = new IntersectionObserver(
+  (es) => es.forEach((e) => {
+    if (e.isIntersecting) {
+      menu.querySelectorAll('a').forEach((a) => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+    }
+  }),
+  { rootMargin: '-45% 0px -50% 0px' }
+);
+document.querySelectorAll('main section').forEach((s) => navObs.observe(s));
+
+addEventListener('scroll', () => $('top').classList.toggle('vis', scrollY > 600), { passive: true });
+$('top').onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
+
+function setTheme(d) {
+  document.documentElement.dataset.theme = d ? 'dark' : 'light';
+  $('theme').innerHTML = '<i class="fa-solid ' + (d ? 'fa-sun' : 'fa-moon') + '"></i>';
+}
+$('theme').onclick = () => {
+  const d = document.documentElement.dataset.theme !== 'dark';
+  setTheme(d);
+  try { localStorage.setItem('theme', d ? 'dark' : 'light'); } catch (_) {}
+};
+try { if (localStorage.getItem('theme') === 'dark') setTheme(true); } catch (_) {}
+
+const roles = ['UI/UX Designer', 'Product Designer', 'Front-End Developer'];
+let ri = 0;
+setInterval(() => { ri = (ri + 1) % roles.length; $('role').textContent = roles[ri]; }, 3000);
+
+$('cf').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `${f.get('msg')}\n\n${f.get('name')} (${f.get('email')})`;
+  location.href =
+    `mailto:shrivastavanshika95@gmail.com?subject=${encodeURIComponent('Portfolio enquiry from ' + f.get('name'))}` +
+    `&body=${encodeURIComponent(body)}`;
+});
+
+/* ============================================================
+   COUNTERS + SKILL BARS
+   ============================================================ */
+function countUp(el) {
+  const to = +el.dataset.count, dec = +(el.dataset.dec || 0);
+  if (reduce) { el.textContent = to.toFixed(dec); return; }
+  const t0 = performance.now(), d = 1400;
+  (function f(t) {
+    const p = Math.min(1, (t - t0) / d);
+    el.textContent = (to * (1 - Math.pow(1 - p, 3))).toFixed(dec);
+    if (p < 1) requestAnimationFrame(f);
+  })(t0);
+}
+const cObs = new IntersectionObserver(
+  (es) => es.forEach((e) => { if (e.isIntersecting) { countUp(e.target); cObs.unobserve(e.target); } }),
+  { threshold: 0.6 }
+);
+const startCounters = () => document.querySelectorAll('.n[data-count]').forEach((n) => cObs.observe(n));
+
+const bars = [...document.querySelectorAll('#bars .bar i')];
+bars.forEach((b) => { b.dataset.w = b.style.width; if (!reduce) b.style.width = '0'; });
+new IntersectionObserver((es, o) => es.forEach((e) => {
+  if (e.isIntersecting) {
+    bars.forEach((b, i) => setTimeout(() => (b.style.width = b.dataset.w), i * 90));
+    o.disconnect();
+  }
+}), { threshold: 0.25 }).observe($('bars'));
+
+/* ============================================================
+   WELCOME SPLASH
+   ============================================================ */
+const sp = $('splash');
+
+function closeSplash() {
+  sp.classList.add('hide');
+  sp.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  try { sessionStorage.setItem('seen', '1'); } catch (_) {}
+  scrollTo({ top: 0, behavior: 'instant' });
+  startCounters();
+  setTimeout(() => (sp.style.display = 'none'), 600);
+}
+
+let seen = false;
+try { seen = sessionStorage.getItem('seen') === '1'; } catch (_) {}
+
+if (seen) {
+  sp.style.display = 'none';
+  startCounters();
+} else {
+  document.body.style.overflow = 'hidden';
+  $('enter').focus();
+  $('enter').onclick = closeSplash;
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !sp.classList.contains('hide')) closeSplash();
+  });
+}
+
+/* typing effect */
+(function () {
+  const el = $('typed');
+  let i = 0, j = 0, del = false;
+  (function t() {
+    const w = roles[i];
+    el.textContent = w.slice(0, j);
+    if (!del && j < w.length) { j++; setTimeout(t, 70); }
+    else if (!del) { del = true; setTimeout(t, 1100); }
+    else if (j > 0) { j--; setTimeout(t, 35); }
+    else { del = false; i = (i + 1) % roles.length; setTimeout(t, 200); }
+  })();
+})();
+
+/* ============================================================
+   HERO WALL, REVEAL, MARQUEE
+   ============================================================ */
+const D = ['web.png', 'web2.png', 'Game Dashboard 1.png', 'AETHER - Main Dashboard.png', 'FinPilot - Financial Health Dashboard.png', 'borrow smarter.png', 'to do (2).png', 'home automation.png', 'Frame 14.png'];
+$('wall').innerHTML = Array.from({ length: 6 }, (_, c) => {
+  const s = [...D.slice(c % D.length), ...D.slice(0, c % D.length)];
+  return '<div class="wcol">' + [...s, ...s].map((u) => `<img src="${encodeURI(u)}" alt="" loading="lazy" onerror="this.remove()">`).join('') + '</div>';
+}).join('');
+
+const rv = new IntersectionObserver(
+  (es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); rv.unobserve(e.target); } }),
+  { threshold: 0.15 }
+);
+document.querySelectorAll('.sec-head,.item,.step,.about>*,.band,.cc,.toolbox,form').forEach((el, i) => {
+  el.classList.add('rv');
+  el.style.transitionDelay = (i % 4) * 70 + 'ms';
+  rv.observe(el);
+});
+
+const fl = $('flow');
+new IntersectionObserver((es) => es.forEach((e) => fl.classList.toggle('go', e.isIntersecting)), { threshold: 0.2 }).observe(fl);
+
+const SK = ['UI design', 'UX research', 'Wireframing', 'Interactive prototypes', 'Design systems', 'Dashboard design', 'Mobile app design', 'Usability testing', 'Responsive front-end', 'React.js', 'Design to code', 'Figma handoff'];
+$('mqT').innerHTML = [0, 1].map(() => SK.map((s) => `<span class="mq-item">${s}</span>`).join('')).join('');
+
+/* ============================================================
+   CASE STUDIES
+   fit: 'contain' => mobile / tall images (no crop)
+   ============================================================ */
+const CASES = [
+  /* TODO: image file ka naam aur text apne project ke hisaab se edit karo */
+  {
+    title: 'Pharma Company Platform',
+    tag: 'Pharma · Web app',
+    img: 'AuraPharma Enterprise Landing Page.png',
+    fit: 'cover',
+    link: 'https://www.figma.com/design/iUaOOPuGADvZtKlRMaQhnP/Untitled?node-id=0-1&m=dev&t=VSC54FzhJMm8Z1yp-1',
+    role: 'UI/UX design',
+    tools: ['Figma', 'Wireframing', 'Prototyping'],
+    problem: 'Pharma teams work with dense product, order and compliance information, and it is easy to lose time finding the right record.',
+    approach: [
+      'Listed the key tasks users repeat every day and the information they need for each.',
+      'Mapped user flows and sketched wireframes to keep navigation simple.',
+      'Built high-fidelity screens and a prototype in Figma with a consistent component set.',
+    ],
+    solution: 'A clean, structured interface that groups products, orders and records clearly, so users can find and act on information quickly.',
+    outcome: 'A clear, consistent interface that makes everyday pharma workflows easier to scan and complete.',
+    wrap: {
+      cat: 'Web',
+      deliver: ['User flow', 'Wireframes', 'High-fidelity UI', 'Clickable prototype'],
+      learn: 'With data-heavy products, clear structure and hierarchy matter more than visual decoration.',
+      next: 'Test the key flows with real users and refine the navigation.',
+    },
+  },
+  {
+    title: 'Finpilot',
+    tag: 'Wealthtech · Web app',
+    img: 'FinPilot - Financial Health Dashboard.png',
+    fit: 'cover',
+    link: fg('O59KRpEUhgE6a0Bf1QC8xz', '2-3737'),
+    role: 'UI/UX design',
+    tools: ['Figma', 'Wireframing', 'Prototyping'],
+    problem: 'Mutual funds and SIPs can feel overwhelming for first-time investors, and it is hard to see whether you are on track for your goals.',
+    approach: [
+      'Reviewed existing investing apps to see where beginners get lost.',
+      'Mapped the journey from setting a goal to exploring funds, starting a SIP and tracking progress.',
+      'Sketched wireframes first, then built high-fidelity screens and a prototype in Figma.',
+    ],
+    solution: 'A goal-first planner where users explore mutual funds, set up SIPs and follow their progress on one clear financial health dashboard.',
+    outcome: 'A simple, trackable flow that turns a confusing product into clear next steps.',
+    wrap: {
+      cat: 'Web',
+      deliver: ['User flow', 'Wireframes', 'High-fidelity UI', 'Clickable prototype'],
+      learn: "Starting from the user's goal rather than the fund catalogue made the whole flow easier to follow.",
+      next: 'Test the flow with first-time investors and refine the fund comparison step.',
+    },
+  },
+  {
+    title: 'Spending Manager',
+    tag: 'Fintech · Mobile app',
+    img: 'phone 2.png',
+    fit: 'contain',
+    link: fg('MiKO4dOpGfsofticTLvlbL', '8-2'),
+    role: 'UI/UX design',
+    tools: ['Figma', 'Mobile-first design', 'Prototyping'],
+    problem: 'Many people only find out where their money went after the month is over.',
+    approach: [
+      'Defined the everyday actions: check balance, log spending, review categories.',
+      'Kept key actions within thumb reach in a mobile-first layout.',
+      'Built a consistent set of components and screens in Figma.',
+    ],
+    solution: 'A mobile app built around clear financial overviews, so spending is easy to scan and manage.',
+    outcome: 'Quick, easy-to-read screens that make reviewing daily spending effortless.',
+    wrap: {
+      cat: 'Mobile',
+      deliver: ['Mobile UI', 'Component set', 'Clickable prototype'],
+      learn: 'Designing for thumb reach first made everyday actions faster and the screens simpler.',
+      next: 'Add budgets and spending insights, then run quick usability tests.',
+    },
+  },
+];
+
+const wrapUp = (c) => `
+  <div class="wrapup">
+    <h4><i class="fa-solid fa-flag-checkered"></i> Wrap up</h4>
+    <div class="wu">
+      <div><h5>Deliverables</h5><div class="tk">${chips(c.wrap.deliver)}</div></div>
+      <div><h5>Key takeaway</h5><p>${esc(c.wrap.learn)}</p></div>
+      <div><h5>Next steps</h5><p>${esc(c.wrap.next)}</p></div>
+    </div>
+    <button class="btn btn-g" data-ui="${esc(c.wrap.cat)}">
+      See the final UI screens <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>`;
+
+const caseCard = (c, i) => `
+  <article class="case">
+    <button class="case-img ${c.fit === 'contain' ? 'contain' : ''}" data-c="${i}" aria-label="Enlarge ${esc(c.title)} case study image">
+      <img src="${esc(c.img)}" alt="${esc(c.title)}" loading="lazy">
+      <span class="case-zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+    </button>
+    <div>
+      <small class="ck">${esc(c.tag)}</small>
+      <h3>${esc(c.title)}</h3>
+      <div class="cblk"><h5>The problem</h5><p>${esc(c.problem)}</p></div>
+      <div class="cblk"><h5>My approach</h5><ul>${c.approach.map((a) => `<li>${esc(a)}</li>`).join('')}</ul></div>
+      <div class="cblk"><h5>The solution</h5><p>${esc(c.solution)}</p></div>
+      <div class="cblk"><h5>Outcome</h5><p>${esc(c.outcome)}</p></div>
+      <div class="tk"><span>${esc(c.role)}</span>${chips(c.tools)}</div>
+      ${c.link ? `<a class="btn btn-p" href="${esc(c.link)}" target="_blank" rel="noopener"><i class="fa-brands fa-figma"></i> Open in Figma</a>` : ''}
+    </div>
+    ${wrapUp(c)}
+  </article>`;
+
+$('u-cases').innerHTML = CASES.map(caseCard).join('');
+
+$('u-cases').onclick = (e) => {
+  const u = e.target.closest('[data-ui]');
+  if (u) {
+    setU('screens');
+    filter = u.dataset.ui;
+    all = false;
+    render();
+    $('work').scrollIntoView();
+    return;
+  }
+
+  const d = e.target.closest('.case-img');
+  if (!d) return;
+  const c = CASES[+d.dataset.c];
+  openLB(0, d, [{
+    title: c.title, category: c.tag, description: c.solution,
+    role: c.role, tools: c.tools, link: c.link, images: [c.img],
+  }]);
+};
+
+/* ============================================================
+   WIREFRAMES (placeholder shows until the image exists)
+   ============================================================ */
+const WIRES = [
+  { title: 'Finpilot: low-fidelity flow', desc: 'Goal setting, fund exploration and SIP setup, sketched before visual design.', image: 'wireframe-finpilot.png' },
+  { title: 'Borrow Smarter: dashboard layout', desc: 'Structure of the portfolio overview before colour and type.', image: 'wireframe-borrow.png' },
+  { title: 'Spending Manager: mobile screens', desc: 'Key mobile screens laid out for thumb reach.', image: 'wireframe-spending.png' },
+];
+
+$('u-wires').innerHTML = `
+  <div class="wgrid">
+    ${WIRES.map((w) => `
+      <article class="wcard">
+        <div class="wimg">
+          <img src="${esc(w.image)}" alt="${esc(w.title)}" loading="lazy"
+               onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'wf-ph',role:'img',ariaLabel:'Wireframe coming soon'}))">
+        </div>
+        <div class="wb"><h3>${esc(w.title)}</h3><p>${esc(w.desc)}</p></div>
+      </article>`).join('')}
+  </div>`;
+
+/* ============================================================
+   PROTOTYPES (Figma file must be "anyone with the link")
+   ============================================================ */
+const PROTOS = [
+  { title: 'Finpilot prototype', desc: 'Click through the goal and SIP flow.', url: 'https://www.figma.com/design/O59KRpEUhgE6a0Bf1QC8xz/Untitled?node-id=2-3737' },
+  { title: 'Spending Manager prototype', desc: 'Interactive mobile app flow.', url: 'https://www.figma.com/design/MiKO4dOpGfsofticTLvlbL/Untitled?node-id=8-2' },
+];
+const figEmbed = (u) => 'https://www.figma.com/embed?embed_host=share&url=' + encodeURIComponent(u);
+
+$('u-protos').innerHTML = `
+  <div class="pgrid">
+    ${PROTOS.map((p, i) => `
+      <article class="pcard">
+        <div class="pstage" data-p="${i}"><button class="play"><i class="fa-solid fa-play"></i> Play prototype</button></div>
+        <div class="wb">
+          <h3>${esc(p.title)}</h3><p>${esc(p.desc)}</p>
+          <div class="pbtns"><a class="btn btn-g" href="${esc(p.url)}" target="_blank" rel="noopener"><i class="fa-brands fa-figma"></i> Open in Figma</a></div>
+        </div>
+      </article>`).join('')}
+  </div>`;
+
+$('u-protos').onclick = (e) => {
+  const b = e.target.closest('.play');
+  if (!b) return;
+  const s = b.parentElement;
+  s.innerHTML = `<iframe src="${esc(figEmbed(PROTOS[+s.dataset.p].url))}" allowfullscreen loading="lazy" title="Figma prototype"></iframe>`;
+};
+
+/* ============================================================
+   FRONT-END WORK (live = deployed link)
+   ============================================================ */
+const FRONT = [
+
+  { title: 'Healthcare / Pharma Management Dashboard', desc: 'A responsive dashboard for managing patients, products and records, with clear tables and easy navigation.', image: 'healthcare-dashboard.png', stack: ['HTML5', 'CSS3', 'JavaScript'], live: '', github: GH },
+
+  { title: 'Project Management & Team Collaboration Tool', desc: 'A task and team workspace for planning projects, assigning work and tracking progress.', image: 'project-management.png', stack: ['React.js', 'CSS3', 'JavaScript'], live: '', github: GH },
+
+  { title: 'AI-powered Resume Builder & Job Tracker', desc: 'A tool to build resumes and keep track of job applications in one place.', image: 'resume-builder.png', stack: ['React.js', 'JavaScript', 'REST API'], live: '', github: GH },
+
+
+  { title: 'Real Estate Property Listing Platform', desc: 'A responsive property listing site with search, filters and detailed property pages.', image: 'real-estate.png', stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'], live: '', github: GH },
+];
+
+$('fgrid').innerHTML = FRONT.map((f, i) => `
+  <article class="fcard">
+    <div class="wimg"><img src="${esc(f.image)}" alt="${esc(f.title)}" loading="lazy"
+         onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'wf-ph',role:'img',ariaLabel:'Preview coming soon'}))"></div>
+    <div class="wb">
+      <small>Front-end</small>
+      <h3>${esc(f.title)}</h3>
+      <p>${esc(f.desc)}</p>
+      <div class="stk"><h6>Tech stack</h6><div class="tk" style="margin-top:0">${chips(f.stack)}</div></div>
+      <div class="fbtns">
+        <button class="btn btn-p" data-v="${i}"><i class="fa-solid fa-eye"></i> View</button>
+        <a class="btn btn-g" href="${esc(f.github || GH)}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </article>`).join('');
+
+$('fgrid').onclick = (e) => {
+  const b = e.target.closest('[data-v]');
+  if (!b) return;
+  const f = FRONT[+b.dataset.v];
+  if (f.live) {
+    window.open(f.live, '_blank', 'noopener');
+  } else {
+    openLB(0, b, [{
+      title: f.title, category: 'Front-end', description: f.desc,
+      role: 'Front-end development', tools: f.stack, link: '', images: [f.image],
+    }]);
+  }
+};
+
+/* ============================================================
+   TABS
+   ============================================================ */
+function setTab(t) {
+  document.querySelectorAll('.wtab').forEach((b) => {
+    const on = b.dataset.t === t;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-selected', on);
+  });
+  $('pane-ux').hidden = t !== 'ux';
+  $('pane-fe').hidden = t !== 'fe';
+}
+
+function setU(u) {
+  document.querySelectorAll('#uxf .chip').forEach((b) => {
+    const on = b.dataset.u === u;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-selected', on);
+  });
+  ['cases', 'screens', 'wires', 'protos'].forEach((k) => ($('u-' + k).hidden = k !== u));
+}
+
+$('wtabs').onclick = (e) => { const b = e.target.closest('.wtab'); if (b) setTab(b.dataset.t); };
+$('uxf').onclick = (e) => { const b = e.target.closest('.chip'); if (b) setU(b.dataset.u); };
+
+/* section eyebrows */
+const EB = { work: 'Portfolio', about: 'About', services: 'Services', process: 'Process', skills: 'Expertise', experience: 'Background', contact: 'Contact' };
+document.querySelectorAll('main section[id]').forEach((s) => {
+  const h = s.querySelector('.sec-head h2');
+  if (h && EB[s.id]) h.insertAdjacentHTML('beforebegin', `<span class="eyebrow">${EB[s.id]}</span>`);
+});
+</script>
+</body>
+</html>
