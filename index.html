@@ -1057,7 +1057,57 @@ $('mqT').innerHTML = [0, 1].map(() => SK.map((s) => `<span class="mq-item">${s}<
    CASE STUDIES
    fit: 'contain' => mobile / tall images (no crop)
    ============================================================ */
+const CASE_VISIBLE = 2; // kitni case studies pehle dikhein, baaki "View more" ke peeche
+
 const CASES = [
+  {
+    title: 'Custom Office Desk Configurator',
+    tag: 'E-commerce · Web app',
+    img: 'DESKFORM Homepage & Model Catalog.png', // apni screenshot ka naam yahan daalo
+    fit: 'cover',
+    link: 'https://www.figma.com/design/0fcVIFEQ9pQvsaKTgzZW2r/Untitled?node-id=0-1&m=dev&t=6xArO32jdMcv90oH-1', // Figma link ho to yahan daalo
+    role: 'UI/UX design',
+    tools: ['Figma', 'User flows', 'Prototyping', 'Design systems'],
+    problem: 'Buying an office desk online is hard: size, material, finish and add-ons all affect each other, and buyers cannot tell how the final desk will look or what it will cost until the very end.',
+    approach: [
+      'Broke the buying decision into clear steps: size, material, colour, legs, storage and accessories.',
+      'Mapped the configuration flow so every choice shows its effect on the desk and the price straight away.',
+      'Sketched wireframes with a large live preview beside the options panel, then built high-fidelity screens and a prototype in Figma.',
+      'Created reusable option cards, swatches, toggles and a price summary component for a consistent experience.',
+    ],
+    solution: 'A step-by-step configurator where users customise their desk and see a live preview with a running price, then review a clear summary before ordering or requesting a quote.',
+    outcome: 'A guided flow that turns a complex custom purchase into simple choices, with no surprises at checkout.',
+    wrap: {
+      cat: 'Web',
+      deliver: ['User flow', 'Wireframes', 'High-fidelity UI', 'Component set', 'Clickable prototype'],
+      learn: 'When every choice changes the product, instant visual and price feedback builds more confidence than long option lists.',
+      next: 'Test the flow with real buyers and add saved configurations and a share link.',
+    },
+  },
+  {
+    title: 'Farm-to-Business Bulk Supply Platform',
+    tag: 'B2B marketplace · Web app',
+    img: 'Html → Body.png', // apni screenshot ka naam yahan daalo
+    fit: 'cover',
+    link: 'https://www.figma.com/design/Wq1ta5BoNGsGCII0krC3MZ/Untitled?node-id=1-2&m=dev&t=MJmDHScHAdy5yl4m-1', // Figma link ho to yahan daalo
+    role: 'UI/UX design',
+    tools: ['Figma', 'User research', 'Wireframing', 'Prototyping'],
+    problem: 'Farmers struggle to reach business buyers directly, while restaurants, retailers and hotels struggle to find reliable bulk suppliers with clear pricing, quantity and delivery details.',
+    approach: [
+      'Identified two user groups, farmers (sellers) and businesses (buyers), and listed what each needs to trust the other.',
+      'Mapped separate flows: listing produce and managing orders for farmers, and searching, comparing and placing bulk orders for buyers.',
+      'Designed wireframes for product listings, bulk quantity selection, quotes and order tracking.',
+      'Built high-fidelity screens and a prototype in Figma, with clear status labels and simple forms to suit users who are not tech-savvy.',
+    ],
+    solution: 'A marketplace where farmers list produce with quantity, price and availability, and businesses search, filter and order in bulk, with order tracking from confirmation to delivery.',
+    outcome: 'A clear, trustworthy flow that connects farms directly with businesses and makes bulk ordering simple for both sides.',
+    wrap: {
+      cat: 'Web',
+      deliver: ['User research', 'User flows', 'Wireframes', 'High-fidelity UI', 'Clickable prototype'],
+      learn: 'A two-sided platform needs two clear journeys, and simple language and big, readable controls matter as much as features.',
+      next: 'Test with a few farmers and buyers, and add a regional language option.',
+    },
+  },
   /* TODO: image file ka naam aur text apne project ke hisaab se edit karo */
   {
     title: 'Pharma Company Platform',
@@ -1144,7 +1194,7 @@ const wrapUp = (c) => `
   </div>`;
 
 const caseCard = (c, i) => `
-  <article class="case">
+  <article class="case"${i >= CASE_VISIBLE ? ' hidden' : ''}>
     <button class="case-img ${c.fit === 'contain' ? 'contain' : ''}" data-c="${i}" aria-label="Enlarge ${esc(c.title)} case study image">
       <img src="${esc(c.img)}" alt="${esc(c.title)}" loading="lazy">
       <span class="case-zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
@@ -1162,9 +1212,29 @@ const caseCard = (c, i) => `
     ${wrapUp(c)}
   </article>`;
 
-$('u-cases').innerHTML = CASES.map(caseCard).join('');
+const moreLabel = `View more case studies (${CASES.length - CASE_VISIBLE} more)`;
+
+$('u-cases').innerHTML =
+  CASES.map(caseCard).join('') +
+  (CASES.length > CASE_VISIBLE
+    ? `<div class="more"><button class="btn btn-g" id="caseMore" aria-expanded="false">
+         <span>${moreLabel}</span> <i class="fa-solid fa-chevron-down"></i>
+       </button></div>`
+    : '');
 
 $('u-cases').onclick = (e) => {
+  /* View more / Show fewer */
+  const m = e.target.closest('#caseMore');
+  if (m) {
+    const open = m.getAttribute('aria-expanded') !== 'true';
+    document.querySelectorAll('#u-cases .case').forEach((c, i) => { if (i >= CASE_VISIBLE) c.hidden = !open; });
+    m.setAttribute('aria-expanded', open);
+    m.querySelector('span').textContent = open ? 'Show fewer case studies' : moreLabel;
+    m.querySelector('i').className = 'fa-solid ' + (open ? 'fa-chevron-up' : 'fa-chevron-down');
+    if (!open) $('work').scrollIntoView();
+    return;
+  }
+
   const u = e.target.closest('[data-ui]');
   if (u) {
     setU('screens');
